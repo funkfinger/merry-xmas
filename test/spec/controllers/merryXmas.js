@@ -13,8 +13,6 @@ describe('controller: merryXmasController', function () {
     ctrl = $controller('merryXmasController', { $scope: scope });
     $httpBackend = _$httpBackend_;
     $httpBackend.expectGET('xmas_albums.json').respond(albumsJson);
-
-
   }));
 
   it('should have the Jasmine testing framework working', function() {
@@ -23,9 +21,9 @@ describe('controller: merryXmasController', function () {
 
   it('should have X number of albums and well formed objects', function() {
     $httpBackend.flush();
-    expect(scope.xmasAlbums.length).toBe(16);
-    expect(scope.xmasAlbums[0].year).toBe(2013);
-    expect(scope.xmasAlbums[0].songs.length).toBe(2);
+    expect(scope.albums.length).toBe(16);
+    expect(scope.albums[0].year).toBe(2013);
+    expect(scope.albums[0].songs.length).toBe(2);
   });
 
 
