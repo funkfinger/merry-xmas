@@ -1,4 +1,12 @@
 <div class="header">
-  <h3 id='page_title'>Ho, Ho, Hey-oooo! <small class="text-muted">Carrie, Jay &amp; Wilson's XMAS albums</small></h3>  
+  <h1 id='page_title'>Ho, Ho, Hey-oooo! <small class="text-muted">Carrie, Jay &amp; Wilson's XMAS albums</small></h1>
 </div>
 
+<div>
+<h3>Number of Albums: {{ albumsObj.albums.length }}</h3>
+<ul class="albums">
+    <li ng-repeat="album in albumsObj.albums">
+      {{album.title}}
+    </li>
+  </ul>
+</div>
