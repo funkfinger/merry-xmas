@@ -77,3 +77,20 @@ body {
     border-bottom: 0;
   }
 }
+
+.jumbo-image {
+  height: 200px;
+  width: 200px;
+  padding-right: 1em;
+}
+
+.jumbotron p {
+  font-size: .8em;
+  text-align: left;
+}
+
+.jumbotron {
+  text-align: left;
+}
+
+

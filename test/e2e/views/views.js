@@ -17,13 +17,13 @@ describe('merryXmas app', function () {
   describe('homepage', function() {
 
     it("should contain 'ho ho ho' on homepage", function(){
-      browser.get("http://127.0.0.1:9000/");
+      browser.get("http://127.0.0.1:9011/");
       var title = browser.findElement(by.id('page_title'));
       expect(title.getText()).toEqual('Ho, Ho, Hey-oooo! Carrie, Jay & Wilson\'s XMAS albums');
     });
 
     it("should list the albums on the homepage", function(){
-
+      expect(false).toEqual(true);
     });
 
   });

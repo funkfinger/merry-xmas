@@ -17,3 +17,9 @@ app.config(function ($routeProvider) {
       redirectTo: '/'
     });
 });
+
+// app.run(function($rootScope) {
+//   $rootScope.$on('$viewContentLoaded', function () {
+//     $(document).foundation();
+//   });
+// });

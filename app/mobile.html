@@ -1,0 +1,103 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style type="text/css">
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      html, body, div.splash_screen p {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+      }
+
+      #app_container, .splash_screen {
+        min-height: 100%;
+        width: 676px;
+        margin: 0 auto;
+        background-color: rgba(200,255,255,1);
+      }
+
+      [ng-cloak].splash_screen {
+        display: block !important;
+      }
+      [ng-cloak] {
+        display: none;
+      }
+      .splash_screen {
+        display: none;
+        text-align: center;
+      }
+
+      .spinner {
+        height: 20px;
+        width: 20px;
+        margin: 0px auto;
+        position: relative;
+        -webkit-animation: rotation .6s infinite linear;
+        -moz-animation: rotation .6s infinite linear;
+        -o-animation: rotation .6s infinite linear;
+        animation: rotation .6s infinite linear;
+        border-left: 10px solid rgba(115,115,115,.15);
+        border-right: 10px solid rgba(115,115,115,.15);
+        border-bottom: 10px solid rgba(115,115,115,.15);
+        border-top: 10px solid rgba(115,115,115,.8);
+        border-radius: 100%;
+      }
+
+      @-webkit-keyframes rotation {
+        from {-webkit-transform: rotate(0deg);}
+        to {-webkit-transform: rotate(359deg);}
+      }
+
+      @-moz-keyframes rotation {
+        from {-moz-transform: rotate(0deg);}
+        to {-moz-transform: rotate(359deg);}
+      }
+
+      @-o-keyframes rotation {
+        from {-o-transform: rotate(0deg);}
+        to {-o-transform: rotate(359deg);}
+      }
+
+      @keyframes rotation {
+        from {transform: rotate(0deg);}
+        to {transform: rotate(359deg);}
+      }
+
+    </style>
+
+</head>
+  <body>
+    <div id="app_container" ng-app="merryXmasApp" ng-controller="merryXmasController">
+        <div class="splash_screen" ng-cloak="">
+            <p>loading...</p>
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/merryXmas.js"></script>
+  </body>
+</head>
+
+

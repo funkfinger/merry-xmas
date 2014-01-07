@@ -16,9 +16,28 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
 
   // Define the configuration for all the tasks
+  grunt.loadNpmTasks('grunt-protractor-runner');
   grunt.initConfig({
 
     // Project settings
+
+    // >>>>>>>>>> added for Protractor
+    protractor: {
+      options: {
+          configFile: 'node_modules/protractor/referenceConf.js', // Default config file
+          keepAlive: true, // If false, the grunt process stops when the test fails.
+          args: {
+              // Arguments passed to the command
+          }
+      },
+      test: {
+          configFile: 'test/e2e/conf.js', // Target-specific config file
+          options: {
+              args: {} // Target-specific arguments
+          }
+      }
+    },
+
     yeoman: {
       // configurable paths
       app: require('./bower.json').appPath || 'app',
@@ -81,6 +100,18 @@ module.exports = function (grunt) {
           ]
         }
       },
+
+      testE2e: {
+        options: {
+          port: 9011,
+          base: [
+            '.tmp',
+            'test',
+            '<%= yeoman.app %>'
+          ]
+        }
+      },
+
       dist: {
         options: {
           base: '<%= yeoman.dist %>'
@@ -362,7 +393,15 @@ module.exports = function (grunt) {
     'usemin'
   ]);
 
-  grunt.registerTask('default', [
+  grunt.registerTask('e2e', [
+    'clean:server',
+    'concurrent:test',
+    'autoprefixer',
+    'connect:testE2e',
+    'protractor'
+  ]);
+
+    grunt.registerTask('default', [
     'newer:jshint',
     'test',
     'build'

@@ -4,9 +4,28 @@
 
 <div>
 <h3>Number of Albums: {{ albumsObj.albums.length }}</h3>
+
+
+<div class="container">
+  <div class="jumbotron">
+    <img src="http://funkfinger.s3.amazonaws.com/mp3s/xmas/images/2012/cover.jpeg" alt="title" class="jumbo-image pull-left img-responsive" />
+    <div class="container">
+      <h3>Hello, world!</h3>
+      <p>Lorem ipsum dolor sit amet, aliquando complectitur vim ne, iuvaret incorrupte ea cum. Qui minim malorum in, et ius quis sint cibo, postea salutandi voluptatum ut nam. Cibo dicam quo ei, mel vocibus quaestio ea, ea sea veniam laoreet. Viris facete minimum nam in, nulla epicuri quaestio qui an, ei his perfecto expetenda repudiandae.</p>
+      <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+    </div>
+  </div>
+</div>
+
 <ul class="albums">
     <li ng-repeat="album in albumsObj.albums">
-      {{album.title}}
+      <img src="{{album.imageUrl}}" alt="{{album.title}}" class="img-responsive" /> 
+      <div class="title">{{album.title}}</div>
+      <ul class="songs">
+        <li ng-repeat="song in album.songs">
+          <a href="#{{song.url}}" ng-click="playTrack(this)">{{song.title}}</a>
+        </li>
+      </ul>
     </li>
   </ul>
 </div>

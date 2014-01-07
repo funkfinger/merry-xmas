@@ -2,7 +2,8 @@ node_modules
 dist
 .tmp
 .sass-cache
-app/bower_components
+bower_components
 xmas_albums.json
 .DS_Store
+.idea
 
