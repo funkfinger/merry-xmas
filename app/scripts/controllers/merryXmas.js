@@ -5,7 +5,8 @@ angular.module('merryXmasApp')
     $scope.myTest = 'hello';
     $scope.playTrack = function(item){
       console.log(item.song.url);
-      var sound = new Howl({
+      var sound;
+      sound = new Howl({
         urls: [item.song.url]
       }).play();
     };

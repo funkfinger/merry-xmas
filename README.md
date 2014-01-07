@@ -3,6 +3,14 @@ merry-xmas
 
 A music player for xmas music
 
+getting started:
+
+    git clone <<clone address>>
+    npm install
+    bower install
+    
+
+
 run tests:
 
     grunt karma
